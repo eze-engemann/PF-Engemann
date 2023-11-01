@@ -1,0 +1,596 @@
+@charset "UTF-8";
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.catalogo-viandas .lista-viandas, .catalogo-viandas .lista-viandas .item-viandas .info-producto .container-mas, .catalogo-viandas .lista-viandas .item-viandas .info-producto .container-mas .container-mas-link, .catalogo-viandas .lista-viandas .item-viandas .precio-producto, .catalogo-viandas .lista-viandas .item-viandas .contenedor-linea {
+  display: flex;
+  justify-content: center; }
+
+.catalogo-viandas .lista-viandas .item-viandas .aniadir-carrito, .main-registrocompra .contenedor .formulario form input[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer; }
+
+body {
+  background-color: #ebebeb; }
+
+/* header logo y navbar*/
+header {
+  background-color: rgba(255, 153, 0, 0.6); }
+
+.nav__icon {
+  width: 32px;
+  height: 32px; }
+
+.titular__nav {
+  font-family: 'Poppins';
+  display: inline-block;
+  position: relative; }
+  .titular__nav:hover {
+    color: whitesmoke; }
+  .titular__nav:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: whitesmoke;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.6s ease-out; }
+  .titular__nav:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left; }
+
+.catalogo-viandas {
+  box-sizing: border-box;
+  background: #ebebeb; }
+  .catalogo-viandas .lista-viandas {
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 0px;
+    padding: 2px 2px;
+    flex-wrap: wrap; }
+    .catalogo-viandas .lista-viandas .item-viandas {
+      list-style-type: none;
+      background: #fff;
+      height: 580px;
+      width: 250px;
+      border-radius: 10px;
+      margin-left: 5%;
+      margin-bottom: 5%; }
+      .catalogo-viandas .lista-viandas .item-viandas:last-child {
+        margin-right: 0; }
+      .catalogo-viandas .lista-viandas .item-viandas .img-catalogo {
+        max-width: 100%;
+        height: 300px;
+        object-fit: cover; }
+      .catalogo-viandas .lista-viandas .item-viandas .info-producto .nombre-vianda {
+        font-size: 1.5rem;
+        color: #2F6178; }
+      .catalogo-viandas .lista-viandas .item-viandas .info-producto .menu-style {
+        color: #333; }
+      .catalogo-viandas .lista-viandas .item-viandas .info-producto .container-mas {
+        vertical-align: middle; }
+        .catalogo-viandas .lista-viandas .item-viandas .info-producto .container-mas .container-mas-link {
+          vertical-align: middle;
+          color: black;
+          text-decoration: none;
+          align-items: flex-start; }
+          .catalogo-viandas .lista-viandas .item-viandas .info-producto .container-mas .container-mas-link .p-info {
+            color: #30A2FF; }
+          .catalogo-viandas .lista-viandas .item-viandas .info-producto .container-mas .container-mas-link .icon-mas {
+            width: 25px; }
+      .catalogo-viandas .lista-viandas .item-viandas .precio-producto {
+        align-items: baseline; }
+        .catalogo-viandas .lista-viandas .item-viandas .precio-producto .valor {
+          color: #666666;
+          font-weight: bold;
+          font-size: 30px; }
+        .catalogo-viandas .lista-viandas .item-viandas .precio-producto .select-cant {
+          width: 30px;
+          height: 25px;
+          margin-left: 40px; }
+      .catalogo-viandas .lista-viandas .item-viandas .contenedor-linea .linea {
+        border: none;
+        border-top: 1px solid #333;
+        margin: 10px 0;
+        width: 200px; }
+      .catalogo-viandas .lista-viandas .item-viandas .aniadir-carrito {
+        border: none;
+        background-color: #30A2FF;
+        color: #fff; }
+        .catalogo-viandas .lista-viandas .item-viandas .aniadir-carrito:hover {
+          transform: scale(1.05); }
+      .catalogo-viandas .lista-viandas .item-viandas:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+
+/* Escritorio grande */
+@media (min-width: 1200px) {
+  .catalogo-viandas .lista-viandas .item-viandas {
+    margin-left: 2%;
+    margin-bottom: 2%; } }
+
+/* Escritorio */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .catalogo-viandas .lista-viandas .item-viandas {
+    margin-left: 3%;
+    margin-bottom: 3%; } }
+
+/* Escritorio pequeño / tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .catalogo-viandas .lista-viandas .item-viandas {
+    height: 605px;
+    width: 293px; }
+    .catalogo-viandas .lista-viandas .item-viandas .info-producto .nombre-vianda {
+      font-size: 1.9rem; }
+    .catalogo-viandas .lista-viandas .item-viandas .precio-producto .valor {
+      font-size: 35px; } }
+
+.main-info {
+  padding: initial; }
+  .main-info .mas-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    align-items: center; }
+    .main-info .mas-info .lista-info {
+      box-sizing: border-box;
+      text-align: center;
+      padding-left: initial; }
+      .main-info .mas-info .lista-info .item-info {
+        list-style-type: none;
+        width: 300px;
+        height: 485px;
+        border-radius: 10px;
+        background-image: url("../img/menu-ketoo.png");
+        background-size: cover;
+        background-position: center; }
+        .main-info .mas-info .lista-info .item-info .titulo-box {
+          font-size: 2rem;
+          color: #2F6178;
+          font-weight: 600; }
+        .main-info .mas-info .lista-info .item-info .data-masinfo {
+          display: flex;
+          align-items: baseline;
+          padding: 5px 35px 5px; }
+          .main-info .mas-info .lista-info .item-info .data-masinfo .estrellas {
+            height: 7%;
+            width: 7%; }
+          .main-info .mas-info .lista-info .item-info .data-masinfo h2 {
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-family: 'poppins';
+            font-size: 24px; }
+        .main-info .mas-info .lista-info .item-info .texto-masinfo {
+          font-size: 18px;
+          padding: 5px 0px 4px; }
+        .main-info .mas-info .lista-info .item-info .peso-total {
+          padding: 5px 15px 10px;
+          font-size: 30px; }
+        .main-info .mas-info .lista-info .item-info .contenedor-califica {
+          display: flex;
+          justify-content: center; }
+          .main-info .mas-info .lista-info .item-info .contenedor-califica .califica {
+            display: flex;
+            align-items: center;
+            border-color: #c0c0c0;
+            border-radius: 44px;
+            border-style: solid;
+            border-width: 2px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 26px;
+            padding: 8px 16px 6px;
+            text-align: center;
+            transition: background-color 0.3s; }
+            .main-info .mas-info .lista-info .item-info .contenedor-califica .califica:hover {
+              background-color: rgba(255, 153, 0, 0.6); }
+            .main-info .mas-info .lista-info .item-info .contenedor-califica .califica .estrella-califica {
+              width: 25px; }
+    .main-info .mas-info .contenedor-descripcion {
+      margin: 0 5%; }
+      .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo {
+        display: flex;
+        align-items: center; }
+        .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo .mar-viandas-logo {
+          width: 100px; }
+        .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo .mar-viandas-titulo {
+          font-size: 35px;
+          text-align: center; }
+        .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo .parrafo-mar-viandas {
+          margin-top: 3%;
+          font-size: 12px; }
+
+/* Escritorio grande */
+@media (min-width: 1200px) {
+  .main-info .mas-info {
+    margin-top: 2%;
+    flex-direction: row;
+    padding: 1.5rem; }
+    .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo {
+      margin-bottom: 2%; }
+      .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo .mar-viandas-logo {
+        margin-right: 2%; }
+      .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo .mar-viandas-titulo {
+        font-size: 50px; }
+      .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo .parrafo-mar-viandas {
+        font-size: 18px; } }
+
+/* Escritorio */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .main-info .mas-info {
+    flex-direction: row;
+    margin-top: 1.5%;
+    padding: 1.5rem; }
+    .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo {
+      margin-bottom: 1.5%; }
+      .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo .mar-viandas-logo {
+        margin-right: 1.5%; }
+      .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo .mar-viandas-titulo {
+        font-size: 45px; }
+      .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo .parrafo-mar-viandas {
+        font-size: 16px; } }
+
+/* Escritorio pequeño / tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .main-info .mas-info {
+    flex-direction: row;
+    margin-top: 1%;
+    padding: 1.5rem; }
+    .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo {
+      margin-bottom: 1%; }
+      .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo .mar-viandas-logo {
+        margin-right: 1%; }
+      .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo .mar-viandas-titulo {
+        font-size: 40px; }
+      .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo .parrafo-mar-viandas {
+        font-size: 14px; } }
+
+.main-registrocompra {
+  background-image: url("../img/fondo-gral.png");
+  background-size: cover;
+  background-position: center;
+  height: 800px; }
+  .main-registrocompra .contenedor .formulario {
+    background-color: rgba(255, 255, 255, 0.9);
+    flex-basis: 50%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
+    .main-registrocompra .contenedor .formulario .title-registrocompra {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center; }
+    .main-registrocompra .contenedor .formulario form label {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 5px; }
+    .main-registrocompra .contenedor .formulario form input[type="text"],
+    .main-registrocompra .contenedor .formulario form input[type="email"],
+    .main-registrocompra .contenedor .formulario form [type="password"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
+    .main-registrocompra .contenedor .formulario form input[type="submit"] {
+      background-color: transparent;
+      color: #2f6178;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      border-color: #2f6178; }
+    .main-registrocompra .contenedor .formulario form input[type="submit"]:hover {
+      background-color: rgba(255, 153, 0, 0.6);
+      color: white; }
+
+.nosotros .container__nosotros {
+  display: grid;
+  align-content: center;
+  text-align: center; }
+  .nosotros .container__nosotros .titulo__nosotros {
+    font-size: 3rem; }
+  .nosotros .container__nosotros .nosotros-img-desc .nosotros__imgintro {
+    margin-top: 1rem; }
+    .nosotros .container__nosotros .nosotros-img-desc .nosotros__imgintro .nosotrosimg {
+      width: 100%;
+      height: auto; }
+  .nosotros .container__nosotros .nosotros-img-desc .nosotros__texto {
+    margin-top: 1rem; }
+  .nosotros .container__nosotros .container__funciona .titulo__comofunciona {
+    font-size: 2rem;
+    margin-top: 5px; }
+  .nosotros .container__nosotros .container__funciona .funciona-img-desc .funciona__imgintro {
+    margin-top: 1rem; }
+    .nosotros .container__nosotros .container__funciona .funciona-img-desc .funciona__imgintro .funcionaimg {
+      width: 100%;
+      height: auto; }
+  .nosotros .container__nosotros .container__funciona .funciona-img-desc .funciona__texto {
+    margin-top: 1rem; }
+
+/* Escritorio grande */
+@media (min-width: 1200px) {
+  .nosotros .container__nosotros .titulo__nosotros {
+    font-size: 5rem; }
+  .nosotros .container__nosotros .nosotros-img-desc {
+    display: flex;
+    align-items: center; }
+    .nosotros .container__nosotros .nosotros-img-desc .nosotros__texto {
+      font-size: 20px;
+      margin-left: 1%;
+      margin-right: 1%; }
+  .nosotros .container__nosotros .container__funciona {
+    margin-top: 2%; }
+    .nosotros .container__nosotros .container__funciona .titulo__comofunciona {
+      font-size: 3rem; }
+    .nosotros .container__nosotros .container__funciona .funciona-img-desc {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center; }
+      .nosotros .container__nosotros .container__funciona .funciona-img-desc .funciona__texto {
+        font-size: 20px;
+        margin-left: 1%;
+        margin-right: 1%; } }
+
+/* Escritorio */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .nosotros .container__nosotros .nosotros-img-desc {
+    display: flex; }
+    .nosotros .container__nosotros .nosotros-img-desc .nosotros__texto {
+      font-size: 12px;
+      margin-left: 1%;
+      margin-right: 1%; }
+  .nosotros .container__nosotros .container__funciona .funciona-img-desc {
+    display: flex;
+    flex-direction: row-reverse; }
+    .nosotros .container__nosotros .container__funciona .funciona-img-desc .funciona__texto {
+      font-size: 12px;
+      margin-left: 1%;
+      margin-right: 1%; } }
+
+/* Escritorio pequeño / tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .nosotros .container__nosotros .nosotros-img-desc {
+    display: flex; }
+    .nosotros .container__nosotros .nosotros-img-desc .nosotros__texto {
+      font-size: 11px; }
+  .nosotros .container__nosotros .container__funciona .funciona-img-desc {
+    display: flex;
+    flex-direction: row-reverse; }
+    .nosotros .container__nosotros .container__funciona .funciona-img-desc .funciona__texto {
+      font-size: 11px; } }
+
+/*main general*/
+main {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center; }
+  main .section-table .contenedor-viandas {
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-weight: 600; }
+
+/*barra busqueda nueva*/
+.search-container {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center; }
+  .search-container .search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px; }
+  .search-container .search-button {
+    background-color: rgba(255, 153, 0, 0.6);
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; }
+  .search-container .lupa {
+    height: 23px; }
+
+/*slide imagenes*/
+.slide-all {
+  position: relative;
+  max-width: 640px;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.slide {
+  display: flex;
+  transform: translate3d(0, 0, 0);
+  transition: all 600ms;
+  animation-name: autoplay;
+  animation-duration: 6.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite; }
+  .slide .item-slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%; }
+
+.pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%; }
+  .pagination .pagination-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms; }
+    .pagination .pagination-item:hover {
+      transform: scale(2); }
+    .pagination .pagination-item img {
+      display: inline-block;
+      max-width: none;
+      height: 100%;
+      transform: scale(1);
+      opacity: 0;
+      transition: all 300ms; }
+      .pagination .pagination-item img:hover {
+        opacity: 1;
+        transform: scale(1); }
+
+input[id="1"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(0, 0, 0); }
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"] {
+  background: #fff; }
+
+input[id="2"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(calc(-100% * 1), 0, 0); }
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"] {
+  background: #fff; }
+
+input[id="3"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(calc(-100% * 2), 0, 0); }
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"] {
+  background: #fff; }
+
+input[id="4"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(calc(-100% * 3), 0, 0); }
+
+input[id="4"]:checked ~ .pagination .pagination-item[for="4"] {
+  background: #fff; }
+
+@keyframes autoplay {
+  25% {
+    transform: translate3d(calc(-100% * 0), 0, 0); }
+  50% {
+    transform: translate3d(calc(-100% * 1), 0, 0); }
+  75% {
+    transform: translate3d(calc(-100% * 2), 0, 0); }
+  100% {
+    transform: translate3d(calc(-100% * 3), 0, 0); } }
+
+/*viandas diarias y congeladas - index*/
+.container-items {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px; }
+  .container-items .item-index {
+    border-radius: 10px;
+    background-color: #fff; }
+    .container-items .item-index:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+    .container-items .item-index .img-index {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+      transition: all .5s; }
+    .container-items .item-index figure {
+      overflow: hidden; }
+    .container-items .item-index :hover .img-index {
+      transform: scale(1.2); }
+    .container-items .item-index .info-product {
+      padding: 5px 31px;
+      line-height: 2;
+      display: flex;
+      flex-direction: column; }
+      .container-items .item-index .info-product .titulo-compra {
+        font-family: 'poppins';
+        font-size: 40px;
+        text-align: center; }
+      .container-items .item-index .info-product .ingresar {
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        background: none;
+        background-color: #30A2FF;
+        color: #fff;
+        cursor: pointer; }
+      .container-items .item-index .info-product h1 {
+        font-family: 'poppins';
+        text-align: center; }
+        .container-items .item-index .info-product h1 a {
+          text-decoration: transparent;
+          color: black; }
+
+/* Escritorio grande */
+@media (min-width: 1200px) {
+  .container-items {
+    display: flex;
+    /* Cambio a flexbox solo en esta media query */
+    flex-direction: row;
+    gap: 5%;
+    margin-left: 5%;
+    margin-right: 5%; }
+    .container-items .item-index {
+      flex: 1 0 calc(50% - 20px);
+      /* Ocupar el 50% del espacio disponible y restar el espacio entre los items */
+      max-width: calc(50% - 20px);
+      /* Establecer el ancho máximo */ } }
+
+/* Escritorio */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container-items {
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+    margin-left: 4%;
+    margin-right: 4%; }
+    .container-items .item-index {
+      flex: 1 0 calc(50% - 15px);
+      /* Ocupar el 50% del espacio disponible y restar el espacio entre los items */
+      max-width: calc(50% - 15px);
+      /* Establecer el ancho máximo */ } }
+
+/* Escritorio pequeño / tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container-items {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    margin-left: 3%;
+    margin-right: 3%; }
+    .container-items .item-index {
+      flex: 1 0 calc(50% - 5px);
+      /* Ocupar el 50% del espacio disponible y restar el espacio entre los items */
+      max-width: calc(50% - 5px);
+      /* Establecer el ancho máximo */ } }
