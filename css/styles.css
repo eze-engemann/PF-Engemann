@@ -9,10 +9,25 @@
   display: flex;
   justify-content: center; }
 
-.catalogo-viandas .lista-viandas .item-viandas .aniadir-carrito, .main-registrocompra .contenedor .formulario form input[type="submit"] {
+.catalogo-viandas .lista-viandas .item-viandas .aniadir-carrito, .main-registro .contenedor-registro .formulario-registro form .registrarse input[type="submit"], .main-compra .contenedor-confirmar-compra .contenedor-btn-comprar .btn-comprar-carrito {
   padding: 10px 20px;
   border-radius: 3px;
   cursor: pointer; }
+
+.catalogo-viandas .lista-viandas .item-viandas .info-producto .nombre-vianda, .main-compra .contenedor-confirmar-compra .contenedor-carrito .articulos-compra .nombre-vianda {
+  font-size: 1.5rem;
+  color: #2F6178; }
+
+.catalogo-viandas .lista-viandas .item-viandas .precio-producto .valor, .main-compra .contenedor-confirmar-compra .contenedor-carrito .articulos-compra .valor, .main-compra .contenedor-confirmar-compra .contenedor-carrito .total-carrito .valor {
+  color: #666666;
+  font-weight: bold;
+  font-size: 30px; }
+
+.main-compra .contenedor-confirmar-compra .contenedor-carrito .title-compra {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Poppins'; }
 
 body {
   background-color: #ebebeb; }
@@ -69,9 +84,6 @@ header {
         max-width: 100%;
         height: 300px;
         object-fit: cover; }
-      .catalogo-viandas .lista-viandas .item-viandas .info-producto .nombre-vianda {
-        font-size: 1.5rem;
-        color: #2F6178; }
       .catalogo-viandas .lista-viandas .item-viandas .info-producto .menu-style {
         color: #333; }
       .catalogo-viandas .lista-viandas .item-viandas .info-producto .container-mas {
@@ -87,10 +99,6 @@ header {
             width: 25px; }
       .catalogo-viandas .lista-viandas .item-viandas .precio-producto {
         align-items: baseline; }
-        .catalogo-viandas .lista-viandas .item-viandas .precio-producto .valor {
-          color: #666666;
-          font-weight: bold;
-          font-size: 30px; }
         .catalogo-viandas .lista-viandas .item-viandas .precio-producto .select-cant {
           width: 30px;
           height: 25px;
@@ -252,12 +260,12 @@ header {
       .main-info .mas-info .contenedor-descripcion .contenedor-logo-y-titulo .parrafo-mar-viandas {
         font-size: 14px; } }
 
-.main-registrocompra {
+.main-registro {
   background-image: url("../img/fondo-gral.png");
   background-size: cover;
   background-position: center;
   height: 800px; }
-  .main-registrocompra .contenedor .formulario {
+  .main-registro .contenedor-registro .formulario-registro {
     background-color: rgba(255, 255, 255, 0.9);
     flex-basis: 50%;
     padding: 30px;
@@ -270,17 +278,18 @@ header {
     border-radius: 5px;
     border: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
-    .main-registrocompra .contenedor .formulario .title-registrocompra {
+    .main-registro .contenedor-registro .formulario-registro .title-registro {
       font-size: 24px;
       margin-bottom: 20px;
       text-align: center; }
-    .main-registrocompra .contenedor .formulario form label {
+    .main-registro .contenedor-registro .formulario-registro form label {
       display: block;
       font-size: 18px;
-      margin-bottom: 5px; }
-    .main-registrocompra .contenedor .formulario form input[type="text"],
-    .main-registrocompra .contenedor .formulario form input[type="email"],
-    .main-registrocompra .contenedor .formulario form [type="password"] {
+      margin-bottom: 5px;
+      text-align: center; }
+    .main-registro .contenedor-registro .formulario-registro form input[type="text"],
+    .main-registro .contenedor-registro .formulario-registro form input[type="email"],
+    .main-registro .contenedor-registro .formulario-registro form [type="password"] {
       width: 100%;
       padding: 10px;
       font-size: 16px;
@@ -288,15 +297,43 @@ header {
       border-radius: 5px;
       border: none;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
-    .main-registrocompra .contenedor .formulario form input[type="submit"] {
-      background-color: transparent;
-      color: #2f6178;
-      font-size: 16px;
-      transition: all 0.3s ease;
-      border-color: #2f6178; }
-    .main-registrocompra .contenedor .formulario form input[type="submit"]:hover {
-      background-color: rgba(255, 153, 0, 0.6);
-      color: white; }
+    .main-registro .contenedor-registro .formulario-registro form .registrarse {
+      display: flex;
+      justify-content: center; }
+      .main-registro .contenedor-registro .formulario-registro form .registrarse input[type="submit"] {
+        text-align: center;
+        background-color: transparent;
+        color: #2f6178;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        border-color: #2f6178; }
+      .main-registro .contenedor-registro .formulario-registro form .registrarse input[type="submit"]:hover {
+        background-color: rgba(255, 153, 0, 0.6);
+        color: white; }
+
+/* Escritorio grande */
+@media (min-width: 1200px) {
+  .main-registro {
+    display: flex;
+    justify-content: center; }
+    .main-registro .contenedor-registro {
+      width: 700px; } }
+
+/* Escritorio */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .main-registro {
+    display: flex;
+    justify-content: center; }
+    .main-registro .contenedor-registro {
+      width: 600px; } }
+
+/* Escritorio pequeño / tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .main-registro {
+    display: flex;
+    justify-content: center; }
+    .main-registro .contenedor-registro {
+      width: 500px; } }
 
 .nosotros .container__nosotros {
   display: grid;
@@ -373,6 +410,113 @@ header {
     flex-direction: row-reverse; }
     .nosotros .container__nosotros .container__funciona .funciona-img-desc .funciona__texto {
       font-size: 11px; } }
+
+.main-compra {
+  background-image: url("../img/fondo-gral.png");
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  flex-direction: column;
+  justify-content: center; }
+  .main-compra .contenedor-confirmar-compra {
+    width: 100%; }
+    .main-compra .contenedor-confirmar-compra .contenedor-carrito {
+      background-color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 3%; }
+      .main-compra .contenedor-confirmar-compra .contenedor-carrito .articulos-compra {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .main-compra .contenedor-confirmar-compra .contenedor-carrito .articulos-compra .ilustracion-carrito {
+          height: 150px;
+          width: 150px;
+          object-fit: cover;
+          margin-top: 5%; }
+        .main-compra .contenedor-confirmar-compra .contenedor-carrito .articulos-compra .select-carrito {
+          width: 30px;
+          height: 25px; }
+      .main-compra .contenedor-confirmar-compra .contenedor-carrito .total-carrito {
+        display: flex;
+        justify-content: space-between; }
+    .main-compra .contenedor-confirmar-compra .contenedor-btn-comprar .btn-comprar-carrito {
+      border: none;
+      background-color: #30A2FF;
+      color: #fff;
+      width: 100%;
+      font-size: 24px; }
+
+/* Escritorio grande */
+@media (min-width: 1200px) {
+  .main-compra {
+    display: flex;
+    justify-content: center;
+    flex-direction: row; }
+    .main-compra .contenedor-confirmar-compra {
+      width: 1145px; }
+      .main-compra .contenedor-confirmar-compra .contenedor-carrito .articulos-compra {
+        flex-direction: row;
+        justify-content: space-between;
+        border-left: 10px solid rgba(255, 153, 0, 0.6); }
+        .main-compra .contenedor-confirmar-compra .contenedor-carrito .articulos-compra .ilustracion-carrito {
+          margin-top: 2%;
+          margin-bottom: 2%;
+          height: 200px;
+          width: 200px; }
+      .main-compra .contenedor-confirmar-compra .contenedor-carrito .total-carrito {
+        border-left: 10px solid red;
+        padding: 10px; }
+      .main-compra .contenedor-confirmar-compra .contenedor-btn-comprar {
+        display: flex;
+        justify-content: flex-end; }
+        .main-compra .contenedor-confirmar-compra .contenedor-btn-comprar .btn-comprar-carrito {
+          width: 20%; } }
+
+/* Escritorio */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .main-compra {
+    display: flex;
+    justify-content: center;
+    flex-direction: row; }
+    .main-compra .contenedor-confirmar-compra .contenedor-carrito .articulos-compra {
+      flex-direction: row;
+      justify-content: space-between;
+      border-left: 10px solid rgba(255, 153, 0, 0.6); }
+      .main-compra .contenedor-confirmar-compra .contenedor-carrito .articulos-compra .ilustracion-carrito {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        height: 200px;
+        width: 200px; }
+    .main-compra .contenedor-confirmar-compra .contenedor-carrito .total-carrito {
+      border-left: 10px solid red;
+      padding: 10px; }
+    .main-compra .contenedor-confirmar-compra .contenedor-btn-comprar {
+      display: flex;
+      justify-content: flex-end; }
+      .main-compra .contenedor-confirmar-compra .contenedor-btn-comprar .btn-comprar-carrito {
+        width: 20%; } }
+
+/* Escritorio pequeño / tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .main-compra {
+    display: grid;
+    justify-items: center; }
+    .main-compra .contenedor-confirmar-compra .contenedor-carrito .articulos-compra {
+      flex-direction: row;
+      justify-content: space-between;
+      border-left: 10px solid rgba(255, 153, 0, 0.6); }
+      .main-compra .contenedor-confirmar-compra .contenedor-carrito .articulos-compra .ilustracion-carrito {
+        margin-bottom: 5%;
+        margin-left: 2%; }
+    .main-compra .contenedor-confirmar-compra .contenedor-carrito .contenedor-btn-comprar {
+      display: flex;
+      justify-content: flex-end; }
+      .main-compra .contenedor-confirmar-compra .contenedor-carrito .contenedor-btn-comprar .btn-comprar-carrito {
+        width: 20%; }
+    .main-compra .contenedor-confirmar-compra .contenedor-carrito .total-carrito {
+      border-left: 10px solid red;
+      padding: 10px; } }
 
 /*main general*/
 main {
