@@ -1,0 +1,102 @@
+.main-registro{
+    background-image: url("../img/fondo-gral.png");
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+
+    .contenedor-registro {
+        .formulario-registro {
+            background-color: rgba(255, 255, 255, 0.9);
+            flex-basis: 50%;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+            .title-registro {
+                font-size: 24px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            form {
+                label {
+                    display: block;
+                    font-size: 18px;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+
+                input[type="text"],
+                input[type="email"],
+                [type="password"] {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                    border-radius: 5px;
+                    border: none;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                }
+                .registrarse{
+                    display: flex;
+                    justify-content: center;
+                    input[type="submit"] {
+                        text-align: center;
+                        @extend %estilosboton;
+                        background-color: transparent;
+                        color: #2f6178;
+                        font-size: 16px;
+                        transition: all 0.3s ease;
+                        border-color: #2f6178;
+                    }
+    
+                    input[type="submit"]:hover {
+                        background-color: $color-principal;
+                        color: white;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+/* Escritorio grande */
+@media (min-width: 1200px) {
+    .main-registro{
+        display: flex;
+        justify-content: center;
+        .contenedor-registro{
+            width: 700px;
+        }
+    }
+}
+
+/* Escritorio */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .main-registro{
+        display: flex;
+        justify-content: center;
+        .contenedor-registro{
+            width: 600px;
+        }
+    }
+}
+
+/* Escritorio pequeño / tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .main-registro{
+        display: flex;
+        justify-content: center;
+        .contenedor-registro{
+            width: 500px;
+        }
+    }
+}

@@ -1,0 +1,167 @@
+.main-compra {
+    background-image: url("../img/fondo-gral.png");
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+
+    .contenedor-confirmar-compra {
+        width: 100%;
+
+        .contenedor-carrito {
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 3%;
+
+            .title-compra {
+                @extend %estilos-title-compra;
+            }
+
+            .articulos-compra {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .ilustracion-carrito {
+                    height: 150px;
+                    width: 150px;
+                    object-fit: cover;
+                    margin-top: 5%;
+                }
+
+                .select-carrito {
+                    width: 30px;
+                    height: 25px;
+                }
+
+                .nombre-vianda {
+                    @extend %estilonombre-vianda;
+                }
+
+                .valor {
+                    @extend %estilos-valor;
+                }
+            }
+
+            .total-carrito {
+                display: flex;
+                justify-content: space-between;
+
+                .valor {
+                    @extend %estilos-valor;
+                }
+            }
+        }
+
+        .contenedor-btn-comprar {
+            .btn-comprar-carrito {
+                @extend %estilosboton;
+                border: none;
+                background-color: $color-boton;
+                color: $btn-aniadircarrito;
+                width: 100%;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+
+/* Escritorio grande */
+@media (min-width: 1200px) {
+    .main-compra {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        .contenedor-confirmar-compra {
+            width: 1145px;
+            .contenedor-carrito {
+                .articulos-compra {
+                    @include estilos-articulos-compra;
+
+                    .ilustracion-carrito {
+                        margin-top: 2%;
+                        margin-bottom: 2%;
+                        height: 200px;
+                        width: 200px;
+                    }
+                }
+                .total-carrito{
+                    @include estilos-precio-carrito;
+                }
+            }
+            .contenedor-btn-comprar{
+                display: flex;
+                justify-content: flex-end;
+                .btn-comprar-carrito{
+                    width: 20%;
+                }
+            }
+        }
+    }
+}
+
+/* Escritorio */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .main-compra {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        .contenedor-confirmar-compra {
+            .contenedor-carrito {
+                .articulos-compra {
+                    @include estilos-articulos-compra;
+
+                    .ilustracion-carrito {
+                        margin-top: 2%;
+                        margin-bottom: 2%;
+                        height: 200px;
+                        width: 200px;
+                    }
+                }
+                .total-carrito{
+                    @include estilos-precio-carrito;
+                }
+            }
+            .contenedor-btn-comprar{
+                display: flex;
+                justify-content: flex-end;
+                .btn-comprar-carrito{
+                    width: 20%;
+                }
+            }
+        }
+    }
+}
+
+/* Escritorio pequeño / tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .main-compra {
+        display: grid;
+        justify-items: center;
+        .contenedor-confirmar-compra {
+            .contenedor-carrito {
+                .articulos-compra {
+                    @include estilos-articulos-compra;
+
+                    .ilustracion-carrito {
+                        margin-bottom: 5%;
+                        margin-left: 2%;
+                    }
+                }
+                .contenedor-btn-comprar{
+                    display: flex;
+                    justify-content: flex-end;
+                    .btn-comprar-carrito{
+                        width: 20%;
+                    }
+                }
+                .total-carrito{
+                    @include estilos-precio-carrito;
+                }
+            }
+        }
+    }
+}

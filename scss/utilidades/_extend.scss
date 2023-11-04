@@ -1,0 +1,29 @@
+%estilosflex{
+    display: flex;
+    justify-content: center;
+}
+
+%estilosboton{
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+%estilonombre-vianda{
+    font-size: 1.5rem;
+    color: #2F6178;
+}
+
+%estilos-valor{
+    color: $color-valor;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+%estilos-title-compra{
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Poppins';
+}
+
